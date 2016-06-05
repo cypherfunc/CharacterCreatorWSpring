@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DBPackage.RacesEntity" table="RACES" schema="">
+        <id name="name">
+            <column name="name" sql-type="text(0,-1)"/>
+        </id>
+        <property name="strAdjust">
+            <column name="strAdjust" sql-type="int(0,-1)"/>
+        </property>
+        <property name="dexAdjust">
+            <column name="dexAdjust" sql-type="int(0,-1)"/>
+        </property>
+        <property name="conAdjust">
+            <column name="conAdjust" sql-type="int(0,-1)"/>
+        </property>
+        <property name="intAdjust">
+            <column name="intAdjust" sql-type="int(0,-1)"/>
+        </property>
+        <property name="wisAdjust">
+            <column name="wisAdjust" sql-type="int(0,-1)"/>
+        </property>
+        <property name="chaAdjust">
+            <column name="chaAdjust" sql-type="int(0,-1)"/>
+        </property>
+        <property name="size">
+            <column name="size" sql-type="text(0,-1)"/>
+        </property>
+        <property name="baseHeight">
+            <column name="baseHeight" sql-type="int(0,-1)"/>
+        </property>
+        <property name="numHeightDice">
+            <column name="numHeightDice" sql-type="int(0,-1)"/>
+        </property>
+        <property name="typeHeightDice">
+            <column name="typeHeightDice" sql-type="int(0,-1)"/>
+        </property>
+        <property name="baseWeight">
+            <column name="baseWeight" sql-type="int(0,-1)"/>
+        </property>
+        <property name="numWeightDice">
+            <column name="numWeightDice" sql-type="int(0,-1)"/>
+        </property>
+        <property name="typeWeightDice">
+            <column name="typeWeightDice" sql-type="int(0,-1)"/>
+        </property>
+        <property name="speed">
+            <column name="speed" sql-type="int(0,-1)"/>
+        </property>
+        <property name="languages">
+            <column name="languages" sql-type="text(0,-1)"/>
+        </property>
+    </class>
+    <class name="DBPackage.SpellsEntity" table="SPELLS" schema="">
+        <id name="name">
+            <column name="name" sql-type="text(0,-1)"/>
+        </id>
+        <property name="level">
+            <column name="level" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="school">
+            <column name="school" sql-type="text(0,-1)" not-null="true"/>
+        </property>
+        <property name="ritual">
+            <column name="ritual" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="castingTime">
+            <column name="castingTime" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="range">
+            <column name="range" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="components">
+            <column name="components" sql-type="text(0,-1)" not-null="true"/>
+        </property>
+        <property name="concentration">
+            <column name="concentration" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="duration">
+            <column name="duration" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="savingThrow">
+            <column name="savingThrow" sql-type="text(0,-1)" not-null="true"/>
+        </property>
+        <property name="numDamageDice">
+            <column name="numDamageDice" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="damageDieType">
+            <column name="damageDieType" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text(0,-1)" not-null="true"/>
+        </property>
+    </class>
+    <class name="DBPackage.WizardspellsEntity" table="WIZARDSPELLS" schema="">
+        <id name="name">
+            <column name="name" sql-type="text(0,-1)" not-null="true"/>
+        </id>
+        <property name="level">
+            <column name="level" sql-type="integer(0,-1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
