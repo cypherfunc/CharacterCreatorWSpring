@@ -3,8 +3,11 @@
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="DBPackage:HibernateConfig.xml" value="859a6f59-18e6-4fdb-bdb2-7daec963eb61" />
+        </datasource-map>
         <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/DBPackage/HibernateConfig.xml" />
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">

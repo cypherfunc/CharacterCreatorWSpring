@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CharactorCreatorWSpring.iml" filepath="$PROJECT_DIR$/CharactorCreatorWSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CharacterCreatorWSpring.iml" filepath="$PROJECT_DIR$/CharacterCreatorWSpring.iml" />
     </modules>
   </component>
 </project>
