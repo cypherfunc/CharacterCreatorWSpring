@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Config">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <HBox alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Item Description" HBox.hgrow="ALWAYS" />
+            <ScrollBar orientation="VERTICAL" HBox.hgrow="NEVER" />
+         </children>
+      </HBox>
+   </right>
+   <center>
+      <HBox prefHeight="775.0" prefWidth="955.0" BorderPane.alignment="CENTER">
+         <children>
+            <Accordion HBox.hgrow="ALWAYS">
+              <panes>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="85.0" text="Race, Background, &amp; Alignment">
+                     <content>
+                        <GridPane hgap="10.0" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                              <ColumnConstraints hgrow="ALWAYS" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                          </rowConstraints>
+                           <children>
+                              <VBox prefHeight="302.0" prefWidth="135.0">
+                                 <children>
+                                    <Label text="Race" />
+                                    <RadioButton mnemonicParsing="false" text="Human" />
+                                    <RadioButton mnemonicParsing="false" text="Dwarf" />
+                                    <RadioButton mnemonicParsing="false" text="Elf" />
+                                    <RadioButton layoutX="10.0" layoutY="61.0" mnemonicParsing="false" text=" Halfling" />
+                                    <RadioButton layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Gnome" />
+                                    <RadioButton layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="Half-Elf" />
+                                    <RadioButton layoutX="10.0" layoutY="112.0" mnemonicParsing="false" text="Half-Orc" />
+                                    <RadioButton layoutX="10.0" layoutY="78.0" mnemonicParsing="false" text="Dragonborn" />
+                                    <RadioButton layoutX="10.0" layoutY="95.0" mnemonicParsing="false" text="Tiefling" />
+                                    <RadioButton layoutX="10.0" layoutY="163.0" mnemonicParsing="false" text="Other" />
+                                    <Button mnemonicParsing="false" text="Set Race" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Background" />
+                                    <RadioButton mnemonicParsing="false" text="Acolyte" />
+                                    <RadioButton mnemonicParsing="false" text="Criminal" />
+                                    <RadioButton mnemonicParsing="false" text="Folk Hero" />
+                                    <RadioButton mnemonicParsing="false" text="Noble/Knight" />
+                                    <RadioButton mnemonicParsing="false" text="Sage" />
+                                    <RadioButton mnemonicParsing="false" text="Soldier" />
+                                    <RadioButton mnemonicParsing="false" text="Other" />
+                                    <Button mnemonicParsing="false" text="Set Race" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Subrace" />
+                                    <RadioButton mnemonicParsing="false" text="Other" />
+                                    <Button mnemonicParsing="false" text="Set Subrace" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Alignment" />
+                                    <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Lawful Good" />
+                                          <RadioButton mnemonicParsing="false" text="Neutral Good" GridPane.columnIndex="1" />
+                                          <RadioButton mnemonicParsing="false" text="Lawful Neutral" GridPane.rowIndex="1" />
+                                          <RadioButton mnemonicParsing="false" text="Neutral" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <RadioButton mnemonicParsing="false" text="Chaotic Good" GridPane.columnIndex="2" />
+                                          <RadioButton mnemonicParsing="false" text="Chaotic Neutral" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <RadioButton mnemonicParsing="false" text="Lawful Evil" GridPane.rowIndex="2" />
+                                          <RadioButton mnemonicParsing="false" text="Neutral Evil" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <RadioButton mnemonicParsing="false" text="Chaotic Evil" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                    <Button mnemonicParsing="false" text="Set Alignment" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label text="Race Stats " />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Background Stats " />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                <TitledPane animated="false" text="Classes">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label prefHeight="29.0" prefWidth="147.0" text="Classes: " />
+                                    <Pane maxHeight="-Infinity" prefHeight="10.0" HBox.hgrow="ALWAYS" />
+                                    <Label prefHeight="27.0" prefWidth="119.0" text="Total Character Level:" />
+                                    <ChoiceBox prefWidth="150.0" />
+                                 </children>
+                              </HBox>
+                              <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                                <tabs>
+                                  <Tab text="Cleric" />
+                                  <Tab text="Fighter" />
+                                    <Tab text="Rogue" />
+                                    <Tab text="Wizard" />
+                                    <Tab text="Other" />
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="110.0" text="Abilities, Skills, &amp; Feats">
+                     <content>
+                        <HBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="ALWAYS" maxWidth="219.0" minWidth="10.0" prefWidth="90.0" />
+                                          <ColumnConstraints hgrow="ALWAYS" maxWidth="386.0" minWidth="10.0" prefWidth="92.0" />
+                                        <ColumnConstraints hgrow="ALWAYS" maxWidth="555.0" minWidth="10.0" prefWidth="211.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                          <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                          <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                          <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                          <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Abilities" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="12.0" text="Ability Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="12.0" text="Ability Modifier" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                          <Label text="Strength" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="34.0" text="Dexterity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="54.0" text="Constitution" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="82.0" text="Intelligence" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="116.0" text="Wisdom" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="150.0" text="Charisma" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="130.0" text="Str Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="107.0" text="Cha Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="61.0" text="Wis Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="153.0" text="Int Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="84.0" text="Con Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="10.0" layoutY="38.0" text="Dex Score" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="223.0" layoutY="130.0" text="Str Mod" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="223.0" layoutY="61.0" text="Cha Mod" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="223.0" layoutY="38.0" text="Wis Mod" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="223.0" layoutY="84.0" text="Int Mod" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="223.0" layoutY="153.0" text="Con Mod" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+                                          <Label layoutX="223.0" layoutY="107.0" text="Dex Mod" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                                       </children>
+                                    </GridPane>
+                                    <Button mnemonicParsing="false" text="Roll Abilities" />
+                                    <HBox>
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Skills" />
+                                                <CheckBox mnemonicParsing="false" text="Acrobatics (Dex)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Animal Handling (Wis)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="Arcana (Int)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Athletics (Str)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="61.0" mnemonicParsing="false" text="Deception (Cha)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="History (Int)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Insight (Wis)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="Intimidation (Cha)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="61.0" mnemonicParsing="false" text="Investigation (Int)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="95.0" mnemonicParsing="false" text="Medicine (Wis)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="78.0" mnemonicParsing="false" text="Nature (Int)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Perception (Wis)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="112.0" mnemonicParsing="false" text="Performance (Cha)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="129.0" mnemonicParsing="false" text="Persuasion (Cha)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="180.0" mnemonicParsing="false" text="Religion (Int)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="197.0" mnemonicParsing="false" text="Sleight of Hand (Dex)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="163.0" mnemonicParsing="false" text="Stealth (Dex)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="146.0" mnemonicParsing="false" text="Survival (Wis)">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Saving Throws" />
+                                                <CheckBox mnemonicParsing="false" text="Strength">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Dexterity">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="27.0" mnemonicParsing="false" text="Constitution">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Intelligence">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="61.0" mnemonicParsing="false" text="Wisdom">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <CheckBox layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Charisma">
+                                                   <graphic>
+                                                      <Label prefWidth="40.0" text="Score" />
+                                                   </graphic>
+                                                </CheckBox>
+                                                <Button mnemonicParsing="false" text="Set Skills" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Feats" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="Languages &amp; Description">
+                     <content>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </TitledPane>
+                <TitledPane animated="false" text="Equipment">
+                     <content>
+                        <FlowPane prefHeight="699.0" prefWidth="0.0" />
+                     </content>
+                </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="135.0" text="Spells">
+                     <content>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <ScrollBar orientation="VERTICAL" HBox.hgrow="NEVER" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "WIZARDSPELLS", schema = "", catalog = "")
-public class WizardspellsEntity {
+public class WizardSpellsEntity {
     private String name;
     private Integer level;
 
@@ -36,7 +36,7 @@ public class WizardspellsEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        WizardspellsEntity that = (WizardspellsEntity) o;
+        WizardSpellsEntity that = (WizardSpellsEntity) o;
 
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (level != null ? !level.equals(that.level) : that.level != null) return false;

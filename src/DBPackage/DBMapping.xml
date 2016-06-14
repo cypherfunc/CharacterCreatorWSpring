@@ -95,7 +95,7 @@
             <column name="description" sql-type="text(0,-1)" not-null="true"/>
         </property>
     </class>
-    <class name="DBPackage.WizardspellsEntity" table="WIZARDSPELLS" schema="">
+    <class name="DBPackage.WizardSpellsEntity" table="WIZARDSPELLS" schema="">
         <id name="name">
             <column name="name" sql-type="text(0,-1)" not-null="true"/>
         </id>

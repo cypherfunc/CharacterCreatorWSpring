@@ -11,7 +11,7 @@
     <mapping class="DBPackage.RacesEntity"/>
     <mapping resource="DBPackage/DBMapping.xml"/>
     <mapping class="DBPackage.SpellsEntity"/>
-    <mapping class="DBPackage.WizardspellsEntity"/>
+    <mapping class="DBPackage.WizardSpellsEntity"/>
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
   </session-factory>
