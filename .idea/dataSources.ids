@@ -3,5 +3,46 @@
   <data-source name="Sqlite (Xerial) - CHARCREATORDB.db" uuid="859a6f59-18e6-4fdb-bdb2-7daec963eb61">
     <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="RACES" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="strAdjust" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="dexAdjust" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="conAdjust" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="intAdjust" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="wisAdjust" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="chaAdjust" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="size" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12" def="J21lZGl1bSc="/>
+      <column name="baseHeight" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="numHeightDice" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="typeHeightDice" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="baseWeight" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="numWeightDice" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="typeWeightDice" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="speed" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4" def="MzA="/>
+      <column name="languages" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <primary-key columns="name"/>
+    </table>
+    <table name="SPELLS" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="level" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="school" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="ritual" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="castingTime" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="range" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="components" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="concentration" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="duration" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="savingThrow" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="numDamageDice" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="damageDieType" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="name"/>
+    </table>
+    <table name="WIZARDSPELLS" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="level" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <primary-key columns="name"/>
+    </table>
   </data-source>
 </component>

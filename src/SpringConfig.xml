@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="creatureBean" class="CreaturePackage.Creature">
+        <property name="hitPoints" value="0"/>
+        <property name="armorClass" value="0"/>
+        <property name="passiveWisdom" value="0"/>
+        <property name="speed" value="30"/>
+        <property name="profBonus" value="0"/>
+        <property name="abilities">
+            <list>
+                <ref bean="strBean"/>
+                <ref bean="dexBean"/>
+                <ref bean="conBean"/>
+                <ref bean="intBean"/>
+                <ref bean="wisBean"/>
+                <ref bean="chaBean"/>
+            </list>
+        </property>
+        <property name="str" ref="strBean"/>
+        <property name="dex" ref="dexBean"/>
+        <property name="con" ref="conBean"/>
+        <property name="intel" ref="intBean"/>
+        <property name="wis" ref="wisBean"/>
+        <property name="cha" ref="chaBean"/>
+        <property name="skills">
+            <list>
+                <ref bean="athleticsBean"/>
+
+                <ref bean="acrobaticsBean"/>
+                <ref bean="sleightOfHandBean"/>
+                <ref bean="stealthBean"/>
+
+                <ref bean="arcanaBean"/>
+                <ref bean="historyBean"/>
+                <ref bean="investigationBean"/>
+                <ref bean="natureBean"/>
+                <ref bean="religionBean"/>
+
+                <ref bean="animalHandlingBean"/>
+                <ref bean="insightBean"/>
+                <ref bean="medicineBean"/>
+                <ref bean="perceptionBean"/>
+                <ref bean="persuasionBean"/>
+
+                <ref bean="deceptionBean"/>
+                <ref bean="intimidationBean"/>
+                <ref bean="performanceBean"/>
+                <ref bean="athleticsBean"/>
+
+                <ref bean="strSaveBean"/>
+                <ref bean="dexSaveBean"/>
+                <ref bean="conSaveBean"/>
+                <ref bean="intSaveBean"/>
+                <ref bean="wisSaveBean"/>
+                <ref bean="chaSaveBean"/>
+            </list>
+        </property>
+        <property name="size" value="MEDIUM"/>
+        <property name="lnc" value="NEUTRAL"/>
+        <property name="gne" value="NEUTRAL"/>
+    </bean>
+
+
+    <bean id="strBean" class="CreaturePackage.Ability">
+        <constructor-arg value="Str"/>
+    </bean>
+    <bean id="dexBean" class="CreaturePackage.Ability">
+        <constructor-arg value="Dex"/>
+    </bean>
+    <bean id="conBean" class="CreaturePackage.Ability">
+        <constructor-arg value="Con"/>
+    </bean>
+    <bean id="intBean" class="CreaturePackage.Ability">
+        <constructor-arg value="Int"/>
+    </bean>
+    <bean id="wisBean" class="CreaturePackage.Ability">
+        <constructor-arg value="Wis"/>
+    </bean>
+    <bean id="chaBean" class="CreaturePackage.Ability">
+        <constructor-arg value="Cha"/>
+    </bean>
+
+
+    <bean id="athleticsBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Athletics"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="strBean"/>
+    </bean>
+
+    <bean id="acrobaticsBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Acrobatics"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="dexBean"/>
+    </bean>
+    <bean id="sleightOfHandBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Sleight of Hand"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="dexBean"/>
+    </bean>
+    <bean id="stealthBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Stealth"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="dexBean"/>
+    </bean>
+
+    <bean id="arcanaBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Arcana"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="intBean"/>
+    </bean>
+    <bean id="historyBean" class="CreaturePackage.Skill">
+        <constructor-arg value="History"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="intBean"/>
+    </bean>
+    <bean id="investigationBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Investigation"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="intBean"/>
+    </bean>
+    <bean id="natureBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Nature"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="intBean"/>
+    </bean>
+    <bean id="religionBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Religion"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="intBean"/>
+    </bean>
+
+    <bean id="animalHandlingBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Animal Handling"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="wisBean"/>
+    </bean>
+    <bean id="insightBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Insight"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="wisBean"/>
+    </bean>
+    <bean id="medicineBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Medicine"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="wisBean"/>
+    </bean>
+    <bean id="perceptionBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Perception"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="wisBean"/>
+    </bean>
+    <bean id="survivalBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Survival"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="wisBean"/>
+    </bean>
+
+    <bean id="deceptionBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Deception"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="chaBean"/>
+    </bean>
+    <bean id="intimidationBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Intimidation"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="chaBean"/>
+    </bean>
+    <bean id="performanceBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Performance"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="chaBean"/>
+    </bean>
+    <bean id="persuasionBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Persuasion"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="chaBean"/>
+    </bean>
+
+    <bean id="strSaveBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Str Save"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="strBean"/>
+    </bean>
+    <bean id="dexSaveBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Dex Save"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="dexBean"/>
+    </bean>
+    <bean id="conSaveBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Con Save"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="conBean"/>
+    </bean>
+    <bean id="intSaveBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Int Save"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="intBean"/>
+    </bean>
+    <bean id="wisSaveBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Wis Save"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="wisBean"/>
+    </bean>
+    <bean id="chaSaveBean" class="CreaturePackage.Skill">
+        <constructor-arg value="Cha Save"/>
+        <constructor-arg ref="creatureBean"/>
+        <constructor-arg ref="chaBean"/>
+    </bean>
+
+
+
+
+</beans>
